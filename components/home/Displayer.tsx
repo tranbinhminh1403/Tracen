@@ -1,15 +1,20 @@
 "use client";
-import Link from "next/link";
-import { UMA_MUSUME_RESOURCE_LINK } from "@/constant";
+import { ResourceLink } from "@/types";
 
-export const GlobalResource = () => {
+export const Displayer = ({
+  title,
+  resourceLink,
+}: {
+  title?: string;
+  resourceLink: ResourceLink[];
+}) => {
   const handleOpenLink = (link: string) => {
     window.open(link, "_blank");
   };
   return (
     <div>
-      <h1>Global Resource</h1>
-      {UMA_MUSUME_RESOURCE_LINK.map((link) => (
+      <h1>{title || ""}</h1>
+      {resourceLink.map((link) => (
         <div
           key={link.title}
           onClick={() => handleOpenLink(link.path)}

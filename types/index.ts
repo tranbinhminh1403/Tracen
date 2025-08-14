@@ -2,6 +2,14 @@ export type Section = {
     title: string;
     path: string;
     logo: string;
+    resource?: ResourceLink[];
+}
+
+export enum Category {
+    DOCUMENTATION,
+    WEB_APP,
+    VIDEO,
+    OTHER
 }
 
 export type ResourceLink = {
@@ -9,4 +17,5 @@ export type ResourceLink = {
     path: string;
     desc?: string;
     note?: string;
+    category?: Category;
 }
