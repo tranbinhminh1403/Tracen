@@ -19,3 +19,9 @@ export type ResourceLink = {
     note?: string;
     category?: Category;
 }
+
+export type AppAccordionItem = {
+    title: string;
+    content: React.ReactNode;
+}
+    
