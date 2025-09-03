@@ -28,7 +28,7 @@ export default function CurrentBanner() {
       {loading ? (
         <p>Loading...</p>
       ) : content ? (
-        <div className='w-full flex flex-col items-center justify-center border pointer-events-none' dangerouslySetInnerHTML={{ __html: content }} />
+        <div className='w-full flex flex-col items-center justify-center pointer-events-none' dangerouslySetInnerHTML={{ __html: content }} />
       ) : (
         <p>Failed to load banner</p>
       )}

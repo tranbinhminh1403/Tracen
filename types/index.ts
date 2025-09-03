@@ -9,6 +9,7 @@ export enum Category {
     DOCUMENTATION,
     WEB_APP,
     VIDEO,
+    TOOLS,
     OTHER
 }
 

@@ -99,6 +99,12 @@ export const UMA_MUSUME_RESOURCE_LINK: ResourceLink[] = [
         path: "https://uma.moe/",
         desc: "Banner approximate, tools,... new app with fewer features",
         category: Category.WEB_APP
+    },
+    {
+        title: "Uma Musume global Uma Inatorrrr",
+        path: "http://alpha123.github.io/uma-tools/umalator-global",
+        desc: "Race simulator",
+        category: Category.TOOLS
     }
 ]
 
@@ -130,7 +136,7 @@ export const SECTION: Section[] = [
     {
         title: "Warframe",
         path: "warframe",
-        logo: "",
+        logo: "/logo/warframe_logo.png",
         resource: WARFRAME_RESOURCE_LINK,
     },
     {
@@ -142,13 +148,13 @@ export const SECTION: Section[] = [
     {
         title: "Girls' Frontline 2: Exilium",
         path: "gfl2",
-        logo: "",
+        logo: "/logo/gfl2_logo.png",
         resource: GFL2_RESOURCE_LINK,
     },
     {
         title: "Elden Ring Nightreign",
         path: "nightreign",
-        logo: "",
+        logo: "/logo/nr_logo.png",
         resource: NIGHTREIGN_RESOURCE_LINK,
     }
 ]

@@ -2,6 +2,7 @@
 import { Category, ResourceLink } from "@/types";
 import { BookOpen } from "lucide-react";
 import { Video } from "lucide-react";
+import { Wrench } from "lucide-react";
 import {ChevronsLeftRightEllipsis} from "lucide-react";
 
 export const Displayer = ({
@@ -22,12 +23,13 @@ export const Displayer = ({
         <div
           key={link.title}
           onClick={() => handleOpenLink(link.path)}
-          className="cursor-pointer hover:bg-gray-100 p-2 rounded py-3"
+          className="cursor-pointer hover:text-blue-400 p-2 rounded py-3"
         >
           <div className="flex items-center">
             {link.category === Category.DOCUMENTATION && <BookOpen className="w-4 h-4" />}
             {link.category === Category.VIDEO && <Video className="w-4 h-4" />}
             {link.category === Category.WEB_APP && <ChevronsLeftRightEllipsis className="w-4 h-4" />}
+            {link.category === Category.TOOLS && <Wrench className="w-4 h-4" />}
             <h2 className="ml-2">{link.title}</h2>
           </div>
           <p>{link.desc}</p>

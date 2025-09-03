@@ -4,99 +4,101 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fdfdfd;
-  --foreground: #000000;
-  --card: #fdfdfd;
-  --card-foreground: #000000;
-  --popover: #fcfcfc;
-  --popover-foreground: #000000;
-  --primary: #7033ff;
+  /* Light theme (fallback - though your app will likely use dark) */
+  --background: #0a0a0f;
+  --foreground: #e2e8f0;
+  --card: #1a1b2e;
+  --card-foreground: #e2e8f0;
+  --popover: #1a1b2e;
+  --popover-foreground: #e2e8f0;
+  --primary: #8b5cf6;
   --primary-foreground: #ffffff;
-  --secondary: #edf0f4;
-  --secondary-foreground: #080808;
-  --muted: #f5f5f5;
-  --muted-foreground: #525252;
-  --accent: #e2ebff;
-  --accent-foreground: #1e69dc;
-  --destructive: #e54b4f;
+  --secondary: #16213e;
+  --secondary-foreground: #cbd5e1;
+  --muted: #0f172a;
+  --muted-foreground: #64748b;
+  --accent: #1e3a8a;
+  --accent-foreground: #60a5fa;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #e7e7ee;
-  --input: #ebebeb;
-  --ring: #000000;
-  --chart-1: #4ac885;
-  --chart-2: #7033ff;
-  --chart-3: #fd822b;
-  --chart-4: #3276e4;
-  --chart-5: #747474;
-  --sidebar: #f5f8fb;
-  --sidebar-foreground: #000000;
-  --sidebar-primary: #000000;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #8b5cf6;
+  --chart-1: #06b6d4;
+  --chart-2: #8b5cf6;
+  --chart-3: #f59e0b;
+  --chart-4: #3b82f6;
+  --chart-5: #64748b;
+  --sidebar: #0f1629;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #8b5cf6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #ebebeb;
-  --sidebar-accent-foreground: #000000;
-  --sidebar-border: #ebebeb;
-  --sidebar-ring: #000000;
+  --sidebar-accent: #1e293b;
+  --sidebar-accent-foreground: #8b5cf6;
+  --sidebar-border: #1e293b;
+  --sidebar-ring: #8b5cf6;
   --font-sans: Plus Jakarta Sans, sans-serif;
   --font-serif: Lora, serif;
   --font-mono: IBM Plex Mono, monospace;
   --radius: 1.4rem;
-  --shadow-2xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);
-  --shadow-xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);
-  --shadow-sm: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 1px 2px -1px hsl(0 0% 0% / 0.16);
-  --shadow: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 1px 2px -1px hsl(0 0% 0% / 0.16);
-  --shadow-md: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 2px 4px -1px hsl(0 0% 0% / 0.16);
-  --shadow-lg: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 4px 6px -1px hsl(0 0% 0% / 0.16);
-  --shadow-xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 8px 10px -1px hsl(0 0% 0% / 0.16);
-  --shadow-2xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.40);
+  --shadow-2xs: 0px 2px 8px 0px rgba(139, 92, 246, 0.1);
+  --shadow-xs: 0px 2px 8px 0px rgba(139, 92, 246, 0.1);
+  --shadow-sm: 0px 4px 12px 0px rgba(139, 92, 246, 0.15), 0px 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow: 0px 4px 12px 0px rgba(139, 92, 246, 0.15), 0px 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0px 6px 16px 0px rgba(139, 92, 246, 0.2), 0px 4px 8px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0px 8px 20px 0px rgba(139, 92, 246, 0.25), 0px 6px 12px -2px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0px 12px 24px 0px rgba(139, 92, 246, 0.3), 0px 8px 16px -4px rgba(0, 0, 0, 0.4);
+  --shadow-2xl: 0px 16px 32px 0px rgba(139, 92, 246, 0.4), 0px 12px 20px -6px rgba(0, 0, 0, 0.5);
   --tracking-normal: -0.025em;
   --spacing: 0.27rem;
 }
 
 .dark {
-  --background: #1a1b1e;
-  --foreground: #f0f0f0;
-  --card: #222327;
-  --card-foreground: #f0f0f0;
-  --popover: #222327;
-  --popover-foreground: #f0f0f0;
-  --primary: #8c5cff;
+  /* Main starfield dark theme */
+  --background: #000000;
+  --foreground: #f1f5f9;
+  --card: #0f0f23;
+  --card-foreground: #f1f5f9;
+  --popover: #1a1a2e;
+  --popover-foreground: #f1f5f9;
+  --primary: #8b5cf6;
   --primary-foreground: #ffffff;
-  --secondary: #2a2c33;
-  --secondary-foreground: #f0f0f0;
-  --muted: #2a2c33;
-  --muted-foreground: #a0a0a0;
-  --accent: #1e293b;
-  --accent-foreground: #79c0ff;
-  --destructive: #f87171;
+  --secondary: #16213e;
+  --secondary-foreground: #cbd5e1;
+  --muted: #0a0a1a;
+  --muted-foreground: #94a3b8;
+  --accent: #1e3a8a;
+  --accent-foreground: #60a5fa;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #33353a;
-  --input: #33353a;
-  --ring: #8c5cff;
-  --chart-1: #4ade80;
-  --chart-2: #8c5cff;
-  --chart-3: #fca5a5;
-  --chart-4: #5993f4;
-  --chart-5: #a0a0a0;
-  --sidebar: #161618;
-  --sidebar-foreground: #f0f0f0;
-  --sidebar-primary: #8c5cff;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #8b5cf6;
+  --chart-1: #06b6d4;
+  --chart-2: #8b5cf6;
+  --chart-3: #f59e0b;
+  --chart-4: #3b82f6;
+  --chart-5: #94a3b8;
+  --sidebar: #000000;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #8b5cf6;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #2a2c33;
-  --sidebar-accent-foreground: #8c5cff;
-  --sidebar-border: #33353a;
-  --sidebar-ring: #8c5cff;
+  --sidebar-accent: #1e293b;
+  --sidebar-accent-foreground: #8b5cf6;
+  --sidebar-border: #1e293b;
+  --sidebar-ring: #8b5cf6;
   --font-sans: Plus Jakarta Sans, sans-serif;
   --font-serif: Lora, serif;
   --font-mono: IBM Plex Mono, monospace;
   --radius: 1.4rem;
-  --shadow-2xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);
-  --shadow-xs: 0px 2px 3px 0px hsl(0 0% 0% / 0.08);
-  --shadow-sm: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 1px 2px -1px hsl(0 0% 0% / 0.16);
-  --shadow: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 1px 2px -1px hsl(0 0% 0% / 0.16);
-  --shadow-md: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 2px 4px -1px hsl(0 0% 0% / 0.16);
-  --shadow-lg: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 4px 6px -1px hsl(0 0% 0% / 0.16);
-  --shadow-xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.16), 0px 8px 10px -1px hsl(0 0% 0% / 0.16);
-  --shadow-2xl: 0px 2px 3px 0px hsl(0 0% 0% / 0.40);
+  --shadow-2xs: 0px 2px 8px 0px rgba(139, 92, 246, 0.15);
+  --shadow-xs: 0px 2px 8px 0px rgba(139, 92, 246, 0.15);
+  --shadow-sm: 0px 4px 12px 0px rgba(139, 92, 246, 0.2), 0px 2px 4px -1px rgba(0, 0, 0, 0.4);
+  --shadow: 0px 4px 12px 0px rgba(139, 92, 246, 0.2), 0px 2px 4px -1px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0px 6px 16px 0px rgba(139, 92, 246, 0.25), 0px 4px 8px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0px 8px 20px 0px rgba(139, 92, 246, 0.3), 0px 6px 12px -2px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0px 12px 24px 0px rgba(139, 92, 246, 0.35), 0px 8px 16px -4px rgba(0, 0, 0, 0.5);
+  --shadow-2xl: 0px 16px 32px 0px rgba(139, 92, 246, 0.4), 0px 12px 20px -6px rgba(0, 0, 0, 0.6);
 }
 
 @theme inline {
@@ -168,5 +170,24 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Additional cosmic theme utilities */
+@layer utilities {
+  .cosmic-glow {
+    @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl animate-pulse;
+  }
+  
+  .starfield-card {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg hover:bg-white/15 hover:border-white/30 hover:shadow-xl transition-all duration-300;
+  }
+  
+  .nebula-shadow {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.2);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
   }
 }

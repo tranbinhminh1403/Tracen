@@ -14,7 +14,7 @@ import {
     return (
       <Accordion type="multiple" className="w-full">
         {data.map((item, index) => (
-          <AccordionItem value={`item-${index}`} key={index}>
+          <AccordionItem value={`item-${index}`} key={index} className="hover:bg-secondary">
             <AccordionTrigger className="px-2 cursor-pointer bg-primary text-primary-foreground">{item.title}</AccordionTrigger>
             <AccordionContent className="bg-secondary">{item.content}</AccordionContent>
           </AccordionItem>

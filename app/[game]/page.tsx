@@ -24,14 +24,13 @@ export default function Game({
 
   return (
     <div className="p-5">
-      <h1 className="text-3xl font-bold text-center my-5">{gameTitle}</h1>
-
+      <h1 className="text-4xl font-bold text-center my-5 text-slate-100 drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] filter brightness-90">{gameTitle}</h1>
     <div className="flex flex-col md:flex-row">
-      <div className="w-1/3">
+      <div className="order-2 md:order-1 w-full md:w-1/3">
         <AppAccordion data={accordionData} />
       </div>
-      <div className="w-2/3">
-        <CurrentBanner />
+      <div className="order-1 md:order-2 w-full md:w-2/3">
+        {/* <CurrentBanner /> */}
       </div>
     </div>
     </div>
