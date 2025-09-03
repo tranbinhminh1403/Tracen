@@ -5,14 +5,12 @@ import fs from 'fs/promises';
 import path from 'path';
 
 interface CacheData {
-  timestamp: string; // ISO string for the date of the last fetch
-  content: string; // HTML content
+  timestamp: string;
+  content: string;
 }
 
-// Path to cache file (use /tmp for Vercel serverless)
 const CACHE_FILE = path.join('./tmp', 'cache.json');
 
-// Helper function to check if the cache is from today
 function isCacheValid(timestamp: string): boolean {
   const cacheDate = new Date(timestamp);
   const today = new Date();
@@ -28,21 +26,16 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const url = searchParams.get('url') || 'https://gametora.com/umamusume';
 
-    // Try to read from cache
     try {
       const cacheContent = await fs.readFile(CACHE_FILE, 'utf-8');
       const cacheData: CacheData = JSON.parse(cacheContent);
-
-      // Check if cache is from today
       if (cacheData.content && isCacheValid(cacheData.timestamp)) {
         return NextResponse.json({ content: cacheData.content });
       }
     } catch (error) {
       console.log('No valid cache found or cache error:', error);
-      // Proceed to fetch if cache is missing or invalid
     }
 
-    // Fetch content with Puppeteer
     const browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -72,18 +65,16 @@ export async function GET(request: Request) {
       );
     }
 
-    // Modify img src attributes with Cheerio
-    const $ = cheerio.load(content);
-    $('img').each((_, img) => {
-      const src = $(img).attr('src');
+    const data = cheerio.load(content);
+    data('img').each((_, img) => {
+      const src = data(img).attr('src');
       if (src && src.startsWith('/')) {
-        $(img).attr('src', `https://gametora.com${src}`);
+        data(img).attr('src', `https://gametora.com${src}`);
       }
     });
 
-    const modifiedContent = $.html();
+    const modifiedContent = data.html();
 
-    // Save to cache
     const cacheData: CacheData = {
       timestamp: new Date().toISOString(),
       content: modifiedContent,

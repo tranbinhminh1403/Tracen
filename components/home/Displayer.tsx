@@ -1,9 +1,7 @@
 "use client";
 import { Category, ResourceLink } from "@/types";
-import { BookOpen } from "lucide-react";
-import { Video } from "lucide-react";
-import { Wrench } from "lucide-react";
-import {ChevronsLeftRightEllipsis} from "lucide-react";
+import { BookOpen, Video, Wrench } from "lucide-react";
+import { ChevronsLeftRightEllipsis } from "lucide-react";
 
 export const Displayer = ({
   // title,
