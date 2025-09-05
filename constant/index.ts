@@ -105,6 +105,12 @@ export const UMA_MUSUME_RESOURCE_LINK: ResourceLink[] = [
         path: "http://alpha123.github.io/uma-tools/umalator-global",
         desc: "Race simulator",
         category: Category.TOOLS
+    },
+    {
+        title: "Maruzensky only fans strat",
+        path: "https://docs.google.com/document/d/1yntpWESmuEqzGY81kL6ycgFASkP4BeNzMEneaW7iRIM/edit?usp=drivesdk",
+        desc: "Hagmaxxing",
+        category: Category.DOCUMENTATION
     }
 ]
 
