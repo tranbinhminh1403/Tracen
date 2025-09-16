@@ -111,6 +111,12 @@ export const UMA_MUSUME_RESOURCE_LINK: ResourceLink[] = [
         path: "https://docs.google.com/document/d/1yntpWESmuEqzGY81kL6ycgFASkP4BeNzMEneaW7iRIM/edit?usp=drivesdk",
         desc: "Hagmaxxing",
         category: Category.DOCUMENTATION
+    },
+    {
+        title: "Another info searcher",
+        path: "https://chronogenesis.net",
+        desc: "Search friend, club fan check",
+        category: Category.WEB_APP
     }
 ]
 
